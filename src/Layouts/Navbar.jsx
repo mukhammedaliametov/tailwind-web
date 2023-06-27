@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
-
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click)
+  const handleClick = () => setClick(!click);
+  const closeNav = () => setClick(false);
 
   const Items = [
-    { name: "Home", link: "/" },
-    { name: "Company", link: "/company" },
-    { name: "Product", link: "/product" },
-    { name: "About Us", link: "/about" },
-    { name: "Contact", link: "/contact" },
+    { name: "Home", link: "/", icon: "fa-solid fa-house" },
+    { name: "Company", link: "/company", icon: "fa-solid fa-building" },
+    {
+      name: "Product",
+      link: "/product",
+      icon: "fa-sharp fa-solid fa-basket-shopping",
+    },
+    { name: "About Us", link: "/about", icon: "fa-solid fa-circle-info" },
+    { name: "Contact", link: "/contact", icon: "fa-solid fa-address-book" },
   ];
 
   return (
@@ -29,17 +33,33 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <ul className="md:hidden sm:block absolute top-20 w-full left-0 p-5 bg-cyan-700">
+        <ul
+          className={
+            !click
+              ? "hidden sm:block"
+              : "sm:hidden absolute top-20 w-40 left-0 p-5 bg-cyan-700"
+          }
+        >
           {Items.map((link) => (
-            <li key={link.name} className="py-5 border-b-[1px]">
-              <Link to={link.link} className="text-white hover:text-white-300 text-1xl">
+            <li key={link.name} className="py-2">
+              <Link
+                to={link.link}
+                className="text-white hover:text-white-300 text-1xl"
+                onClick={closeNav}
+              >
                 {link.name}
               </Link>
+              <span className="ml-3 text-1xl">
+                <i className={link.icon}></i>
+              </span>
             </li>
           ))}
         </ul>
         <span className="text-2xl sm:hidden ">
-          <i onClick={handleClick} className={!click ? 'fas fa-bars' : 'fas fa-times'}></i>
+          <i
+            onClick={handleClick}
+            className={!click ? "fas fa-bars" : "fas fa-times"}
+          ></i>
         </span>
       </div>
       <Outlet />
