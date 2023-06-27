@@ -36,7 +36,7 @@ const Navbar = () => {
         <ul
           className={
             !click
-              ? "hidden sm:block"
+              ? "hidden"
               : "sm:hidden absolute top-20 w-40 left-0 p-5 bg-cyan-700"
           }
         >
