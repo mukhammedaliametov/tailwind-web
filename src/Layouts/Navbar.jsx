@@ -37,11 +37,11 @@ const Navbar = () => {
           className={
             !click
               ? "hidden"
-              : "sm:hidden absolute top-20 w-40 left-0 p-5 bg-cyan-700"
+              : "sm:hidden absolute top-16 left-0 p-5 bg-cyan-700 w-full ease-out duration-700 border-t-2 border-white"
           }
         >
           {Items.map((link) => (
-            <li key={link.name} className="py-2">
+            <li key={link.name} className="py-4">
               <Link
                 to={link.link}
                 className="text-white hover:text-white-300 text-1xl"
