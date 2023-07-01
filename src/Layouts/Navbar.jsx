@@ -14,20 +14,20 @@ const Navbar = () => {
       link: "/product",
       icon: "fa-sharp fa-solid fa-basket-shopping",
     },
-    { name: "About Us", link: "/about", icon: "fa-solid fa-circle-info" },
+    { name: "About", link: "/about", icon: "fa-solid fa-circle-info" },
     { name: "Contact", link: "/contact", icon: "fa-solid fa-address-book" },
   ];
 
   return (
     <>
-      <div className="flex justify-between items-center p-4 px-5 md:p-6 2xl:p-10 2xl:px-20 bg-cyan-700 text-white">
-        <Link to="/" className="text-3xl text-white font-bold">
-          M.Logo
+      <div className="flex max-w-[1330px] h-24 mx-auto justify-between items-center p-4 text-white">
+        <Link to="/" className="w-full text-3xl text-green-500 font-bold">
+          <i class="fa-brands fa-react fa-spin"></i>.React
         </Link>
         <ul className="sm:flex hidden">
           {Items.map((link) => (
-            <li key={link.name} className="px-4">
-              <Link to={link.link} className="text-white hover:text-white-300">
+            <li key={link.name} className="mx-4">
+              <Link to={link.link} className="hover:text-green-500 duration-200">
                 {link.name}
               </Link>
             </li>
@@ -36,12 +36,12 @@ const Navbar = () => {
         <ul
           className={
             !click
-              ? "hidden"
-              : "sm:hidden absolute top-16 left-0 p-5 bg-cyan-700 w-full ease-out duration-700 border-t-2 border-white"
+              ? "h-0"
+              : "sm:hidden absolute top-20 h-80 left-0 bg-green-500 p-5 mt-4 w-full translation ease-in-out duration-300"
           }
         >
           {Items.map((link) => (
-            <li key={link.name} className="py-4">
+            <li key={link.name} className={!click ? 'hidden' : 'py-4'}>
               <Link
                 to={link.link}
                 className="text-white hover:text-white-300 text-1xl"
