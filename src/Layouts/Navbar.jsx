@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex max-w-[1330px] h-24 mx-auto justify-between items-center p-4 text-white">
-        <Link to="/" className="w-full text-3xl text-green-500 font-bold">
+        <Link to="/" className="w-full text-3xl text-green-500 font-bold" onClick={closeNav}>
           <i class="fa-brands fa-react fa-spin"></i>.React
         </Link>
         <ul className="sm:flex hidden">
