@@ -13,7 +13,7 @@ const Home = () => {
         <p className="font-bold px-2 text-1xl text-black-500 mb-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
           laborum iusto ipsam necessitatibus veniam? Ratione distinctio optio
-          sed. Earum sequi totam rem dolor in aut ipsa fugiat, voluptatum velit
+          sed. Earum sequi totam rem dolor in aut ipsa fugiat, voluptatum! velit
           eaque.
         </p>
         <Button title={'Get Started'} />
