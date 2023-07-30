@@ -41,7 +41,7 @@ const Navbar = () => {
           ))}
         </ul>
         <ul
-          className={!click ? 'sm:hidden fixed left-[-60%] top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed flex flex-col left-[-0%] top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'}
+          className={!click ? 'sm:hidden fixed left-[-80%] top-0 w-[80%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed flex flex-col left-[-0%] top-0 w-[75%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'}
         >
           <span
             className={!click ? "hidden" : "w-full text-3xl text-green-500 font-bold mb-12 mt-8 ml-4"}
