@@ -41,17 +41,17 @@ const Navbar = () => {
           ))}
         </ul>
         <ul
-          className={!click ? 'sm:hidden fixed flex flex-col left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed left-[-100%]'}
+          className={!click ? 'sm:hidden fixed left-[-60%] top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed flex flex-col left-[-0%] top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'}
         >
           <span
-            className={!click ? "w-full text-3xl text-green-500 font-bold mb-12 mt-8 ml-4" : "hidden"}
+            className={!click ? "hidden" : "w-full text-3xl text-green-500 font-bold mb-12 mt-8 ml-4"}
             onClick={closeNav}
           >
             <i class="fa-brands fa-react fa-spin"></i>.React
           </span>
 
           {Items.map((link) => (
-            <li key={link.name} className={!click ? "py-4 border-b-[1px] mx-4" : "hidden"}>
+            <li key={link.name} className={!click ? "hidden" : "py-4 border-b-[1px] mx-4"}>
               <Link
                 to={link.link}
                 className="text-white hover:text-white-300 text-1xl "
@@ -68,7 +68,7 @@ const Navbar = () => {
         <span className="text-2xl sm:hidden ">
           <i
             onClick={handleClick}
-            className={!click ? "fas fa-times" : "fas fa-bars"}
+            className={!click ? "fas fa-bars" : "fas fa-xmark"}
           ></i>
         </span>
       </div>
