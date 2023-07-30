@@ -21,13 +21,20 @@ const Navbar = () => {
   return (
     <>
       <div className="flex max-w-[1330px] h-24 mx-auto justify-between items-center p-4 text-white">
-        <Link to="/" className="w-full text-3xl text-green-500 font-bold" onClick={closeNav}>
+        <span
+          to="/"
+          className="w-full text-3xl text-green-500 font-bold"
+          onClick={closeNav}
+        >
           <i class="fa-brands fa-react fa-spin"></i>.React
-        </Link>
+        </span>
         <ul className="sm:flex hidden">
           {Items.map((link) => (
             <li key={link.name} className="mx-4">
-              <Link to={link.link} className="hover:text-green-500 duration-200">
+              <Link
+                to={link.link}
+                className="hover:text-green-500 duration-200"
+              >
                 {link.name}
               </Link>
             </li>
@@ -36,12 +43,19 @@ const Navbar = () => {
         <ul
           className={
             !click
-              ? "h-0"
-              : "sm:hidden absolute top-20 h-80 left-0 bg-green-500 p-5 mt-4 w-full translation ease-in-out duration-300"
+              ? "left-[-50%]"
+              : "sm:hidden absolute flex flex-col top-3 h-full left-0 p-5 bg-black w-[60%] translation ease-in-out duration-500"
           }
         >
+          <span
+            className={!click ? "hidden" : "w-full text-3xl text-green-500 font-bold mb-12"}
+            onClick={closeNav}
+          >
+            <i class="fa-brands fa-react fa-spin"></i>.React
+          </span>
+
           {Items.map((link) => (
-            <li key={link.name} className={!click ? 'hidden' : 'py-4'}>
+            <li key={link.name} className={!click ? "hidden" : "py-3"}>
               <Link
                 to={link.link}
                 className="text-white hover:text-white-300 text-1xl"

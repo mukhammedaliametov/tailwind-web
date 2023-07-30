@@ -24,7 +24,7 @@ const Home = () => {
           />
         </p>
         <p className='text-gray-500 font-bold text-xl md:text-2xl mb-6'>Ipsum, dolor sit consectetur adipisicing elit. In maxime nesciunt, veritatis sint laborum repudiandae.</p>
-        <Button title={'Get Started'} />
+        <Button title={'Get Started'} link='/about' />
       </div>
     </>
   );
