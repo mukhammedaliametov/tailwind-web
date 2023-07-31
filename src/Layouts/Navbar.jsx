@@ -51,7 +51,7 @@ const Navbar = () => {
           </span>
 
           {Items.map((link) => (
-            <li key={link.name} className={!click ? "hidden" : "py-4 border-b-[1px] mx-4"}>
+            <li key={link.name} className={!click ? "hidden" : "py-4 border-b-[1px] mx-6"}>
               <Link
                 to={link.link}
                 className="text-white hover:text-white-300 text-1xl "
