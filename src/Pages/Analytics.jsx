@@ -4,8 +4,8 @@ import Button from "../Layouts/Button";
 
 const Company = () => {
   return (
-    <div className="w-full bg-white px-6">
-      <div className="max-w-[1240px] grid grid-cols-1 md:grid-cols-2 items-center text-black">
+    <div className="w-full bg-white px-6 flex justify-center">
+      <div className="max-w-[1240px] grid grid-cols-1 md:grid-cols-2 items-center py-8 md:py-1 text-black">
         <img src={Laptop} alt="" className="w-[100%]" />
         <div>
           <p className="uppercase text-green-500 text-xl py-1">Data Analytics dashboard</p>
