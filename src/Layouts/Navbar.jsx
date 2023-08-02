@@ -8,14 +8,14 @@ const Navbar = () => {
 
   const Items = [
     { name: "Home", link: "/", icon: "fa-solid fa-house" },
-    { name: "Company", link: "/company", icon: "fa-solid fa-building" },
+    { name: "Company", link: "/", icon: "fa-solid fa-building" },
     {
       name: "Product",
-      link: "/product",
+      link: "/",
       icon: "fa-sharp fa-solid fa-basket-shopping",
     },
-    { name: "About", link: "/about", icon: "fa-solid fa-circle-info" },
-    { name: "Contact", link: "/contact", icon: "fa-solid fa-address-book" },
+    { name: "About", link: "/", icon: "fa-solid fa-circle-info" },
+    { name: "Contact", link: "/", icon: "fa-solid fa-address-book" },
   ];
 
   return (

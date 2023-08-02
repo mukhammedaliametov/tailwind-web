@@ -5,7 +5,7 @@ import Button from "../Layouts/Button";
 const Home = () => {
   return (
     <>
-      <div className="max-w-[800px] w-full  mx-auto text-center ">
+      <div className="max-w-[800px] w-full h-[80vh] mx-auto text-center ">
         <p className="text-green-500 font-bold uppercase p-2 mt-[8rem]">
           Growing With Data Analitycs
         </p>
@@ -24,7 +24,7 @@ const Home = () => {
           />
         </p>
         <p className='text-gray-500 font-bold text-xl md:text-2xl mb-6'>Ipsum, dolor sit consectetur adipisicing elit. In maxime nesciunt, veritatis sint laborum repudiandae.</p>
-        <Button title='Get Started' link='/about' />
+        <Button title='Get Started' link='/' />
       </div>
     </>
   );
