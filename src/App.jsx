@@ -5,6 +5,7 @@ import Hero from './Pages/Hero';
 import Analytics from './Pages/Analytics';
 import { BrowserRouter } from 'react-router-dom';
 import NewsLetter from './Pages/NewsLetter';
+import Cards from './Pages/Cards';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Hero />
       <Analytics />
       <NewsLetter />
+      <Cards />
     </BrowserRouter>
   );
 };
