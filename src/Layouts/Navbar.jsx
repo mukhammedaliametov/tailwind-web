@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Button from "./Button";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -8,14 +9,12 @@ const Navbar = () => {
 
   const Items = [
     { name: "Home", link: "/", icon: "fa-solid fa-house" },
-    { name: "Company", link: "/", icon: "fa-solid fa-building" },
     {
-      name: "Product",
+      name: "Accaunt",
       link: "/",
-      icon: "fa-sharp fa-solid fa-basket-shopping",
+      icon: "fa-solid fa-user",
     },
-    { name: "About", link: "/", icon: "fa-solid fa-circle-info" },
-    { name: "Contact", link: "/", icon: "fa-solid fa-address-book" },
+    { name: "Sing In", link: "/", icon: "fa-solid fa-circle-info" },
   ];
 
   return (
@@ -23,12 +22,12 @@ const Navbar = () => {
       <div className="flex max-w-[1330px] h-24 mx-auto justify-between items-center p-4 text-white">
         <span
           to="/"
-          className="w-full text-3xl text-green-500 font-bold"
+          className="text-3xl text-green-500 font-bold"
           onClick={closeNav}
         >
           <i class="fa-brands fa-react fa-spin"></i>.React
         </span>
-        <ul className="sm:flex hidden">
+        <ul className="sm:flex hidden items-center">
           {Items.map((link) => (
             <li key={link.name} className="mx-4">
               <Link
@@ -39,6 +38,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <button className="mx-3 px-6 py-2 rounded-sm bg-gray-500 hover:bg-green-500 hover:text-black ease-out duration-150">Get Started</button>
         </ul>
         <ul
           className={!click ? 'sm:hidden fixed left-[-80%] top-0 w-[80%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed flex flex-col left-[-0%] top-0 w-[75%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'}
