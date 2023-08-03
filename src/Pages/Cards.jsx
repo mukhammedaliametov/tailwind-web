@@ -32,7 +32,7 @@ const Cards = () => {
     },
   ];
   return (
-    <div className="w-full py-[8rem] rounded-lg px-5 bg-white text-black flex justify-center">
+    <div className="w-full py-[8rem] px-5 bg-white text-black flex justify-center">
       <div className="max-w-[1280px] mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {CardItems.map((card) => (
           <div className="w-full shadow-xl px-[72px] pb-12 text-center shadow-flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-500">

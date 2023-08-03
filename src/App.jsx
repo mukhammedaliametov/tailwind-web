@@ -6,6 +6,7 @@ import Analytics from './Pages/Analytics';
 import { BrowserRouter } from 'react-router-dom';
 import NewsLetter from './Pages/NewsLetter';
 import Cards from './Pages/Cards';
+import Footer from './Layouts/Footer';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Analytics />
       <NewsLetter />
       <Cards />
+      <Footer />
     </BrowserRouter>
   );
 };
